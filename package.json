@@ -1,0 +1,42 @@
+{
+  "scripts": {
+    "dev": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.6.4",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^0.28.11",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "gsap": "^2.0.1",
+    "mini-css-extract-plugin": "^0.4.1",
+    "postcss-loader": "^2.1.5",
+    "webpack-md5-hash": "^0.0.6"
+  },
+  "name": "card-swap",
+  "description": "Stacked cards in a deck",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomaslough/card-swap.git"
+  },
+  "author": "Thomas Lough",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomaslough/card-swap/issues"
+  },
+  "homepage": "https://github.com/thomaslough/card-swap#readme"
+}
