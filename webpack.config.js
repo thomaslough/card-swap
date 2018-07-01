@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
   entry: { main: './src/app/index.js' },
@@ -14,20 +14,24 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
+        use: [{ loader: 'babel-loader' }, { loader: 'eslint-loader' }]
       },
       {
         test: /\.scss$/,
-        use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
+        use: [
+          'style-loader',
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
+        ]
       }
     ]
   },
-  plugins: [ 
-    new CleanWebpackPlugin('dist', {} ),
+  plugins: [
+    new CleanWebpackPlugin('dist', {}),
     new MiniCssExtractPlugin({
-      filename: 'style.[contenthash].css',
+      filename: 'style.[contenthash].css'
     }),
     new HtmlWebpackPlugin({
       inject: false,
@@ -37,8 +41,9 @@ module.exports = {
     }),
     new WebpackMd5Hash()
   ],
-  devServer: {  // configuration for webpack-dev-server
-      // contentBase: './src/public',  //source of static assets
-      port: 3000, // port to run dev-server
-  } 
+  devServer: {
+    // configuration for webpack-dev-server
+    // contentBase: './src/public',  //source of static assets
+    port: 3000 // port to run dev-server
+  }
 };

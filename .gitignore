@@ -38,8 +38,9 @@ Thumbs.db
 .metadata/.lock
 .metadata/version.ini
 
-# Jetbrains
+# IDEs
 .idea
+.vscode
 
 # dependencies
 /node_modules
